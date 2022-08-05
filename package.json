@@ -12,12 +12,16 @@
 		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
 		"changeset": "changeset",
 		"version-packages": "changeset version",
-		"release": "turbo run build --filter=docs^... && changeset publish"
+		"release": "turbo run build --filter=docs^... && changeset publish",
+		"prepare": "husky install"
 	},
 	"devDependencies": {
 		"@changesets/cli": "^2.22.0",
+		"@commitlint/cli": "^17.0.3",
+		"@commitlint/config-conventional": "^17.0.3",
 		"eslint": "^8.15.0",
 		"eslint-config-orbi": "*",
+		"husky": "^8.0.1",
 		"prettier": "^2.5.1",
 		"turbo": "latest"
 	}
