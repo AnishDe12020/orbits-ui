@@ -1,2 +1,13 @@
-import * as React from "react";
-export { Button, type ButtonProps } from "./Button";
+import { ChakraTheme, extendTheme } from "@chakra-ui/react";
+
+import Button from "./components/Button";
+
+const theme = extendTheme({
+  components: {
+    Button,
+  },
+}) as ChakraTheme;
+
+export { theme };
+
+export default theme;
