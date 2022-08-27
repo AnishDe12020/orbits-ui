@@ -12,21 +12,15 @@ type AccessibleColor = {
 /** Accessible color overrides for less accessible colors. */
 const accessibleColorMap: { [key: string]: AccessibleColor } = {
   yellow: {
-    bg: "yellow.500",
     color: "black",
-    hoverBg: "yellow.600",
-    activeBg: "yellow.700",
   },
   cyan: {
-    bg: "cyan.500",
     color: "black",
-    hoverBg: "cyan.600",
-    activeBg: "cyan.700",
   },
 };
 
 const variantSolid: SystemStyleFunction = props => {
-  const { colorScheme: c, theme } = props;
+  const { colorScheme: c } = props;
 
   if (c === "brand") {
     return {
@@ -37,9 +31,7 @@ const variantSolid: SystemStyleFunction = props => {
       border: "1px",
       borderColor: "brand.tertiary",
     };
-  }
-
-  if (c === "gray") {
+  } else if (c === "gray") {
     return {
       color: mode(`inherit`, `whiteAlpha.900`)(props),
       _hover: {
@@ -56,18 +48,18 @@ const variantSolid: SystemStyleFunction = props => {
     activeBg = `${c}.700`,
   } = accessibleColorMap[c] ?? {};
 
-  const background = mode(bg, `${c}.400`)(props);
+  const background = mode(bg, `${c}.300`)(props);
 
   return {
     bg: background,
     color: mode(color, `gray.800`)(props),
     _hover: {
-      bg: mode(hoverBg, `${c}.300`)(props),
+      bg: mode(hoverBg, `${c}.400`)(props),
       _disabled: {
         bg: background,
       },
     },
-    _active: { bg: mode(activeBg, `${c}.400`)(props) },
+    _active: { bg: mode(activeBg, `${c}.500`)(props) },
   };
 };
 
@@ -80,8 +72,8 @@ const variantLink: SystemStyleFunction = props => {
     verticalAlign: "baseline",
     color:
       c === "brand"
-        ? mode(`gray.700`, `gray.400`)(props)
-        : mode(`${c}.700`, `${c}.400`)(props), // TODO: make this accent color or smth
+        ? mode(`gray.700`, `gray.300`)(props)
+        : mode(`${c}.700`, `${c}.300`)(props), // TODO: make this accent color or smth
     _hover: {
       textDecoration: "underline",
       _disabled: {
@@ -111,14 +103,14 @@ const variantGhost: SystemStyleFunction = props => {
     };
   }
 
-  const darkHoverBg = transparentize(`${c}.400`, 0.12)(theme);
-  const darkActiveBg = transparentize(`${c}.400`, 0.24)(theme);
+  const darkHoverBg = transparentize(`${c}.300`, 0.12)(theme);
+  const darkActiveBg = transparentize(`${c}.300`, 0.24)(theme);
 
   const lightHoverBg = transparentize(`${c}.600`, 0.12)(theme);
   const lightActiveBg = transparentize(`${c}.600`, 0.24)(theme);
 
   return {
-    color: mode(`${c}.600`, `${c}.400`)(props),
+    color: mode(`${c}.600`, `${c}.300`)(props),
     bg: "transparent",
     _hover: {
       bg: mode(lightHoverBg, darkHoverBg)(props),
@@ -185,8 +177,8 @@ export const Button = {
     transition: "transform 0.08s ease-out, background 0.3s, opacity 0.3s",
     _active: { transform: "scale(0.99)" },
     _disabled: {
-      pointerEvents: "none",
       opacity: 0.5,
+      cursor: "not-allowed",
     },
   },
   variants,

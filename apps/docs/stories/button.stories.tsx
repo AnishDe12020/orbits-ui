@@ -8,6 +8,29 @@ export const Default = args => <Button {...args}>Default</Button>;
 Default.args = {
   size: "md",
   variant: "solid",
+  colorScheme: "brand",
+};
+
+export const Disabled = args => (
+  <Button {...args} isDisabled>
+    Disabled
+  </Button>
+);
+Disabled.args = {
+  size: "md",
+  variant: "solid",
+  colorScheme: "brand",
+};
+
+export const Loading = args => (
+  <Button {...args} isLoading>
+    Loading
+  </Button>
+);
+Loading.args = {
+  size: "md",
+  variant: "solid",
+  colorScheme: "brand",
 };
 
 export default {
