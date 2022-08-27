@@ -15,7 +15,7 @@ export default {
   component: Button,
   argTypes: {
     size: {
-      control: { type: "select", options: ["xs", "sm", "md", "lg", "xl"] },
+      control: { type: "select", options: ["xs", "sm", "md", "lg"] },
     },
     variant: {
       control: {
