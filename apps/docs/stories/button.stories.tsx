@@ -14,7 +14,9 @@ export default {
   title: "Button",
   component: Button,
   argTypes: {
-    size: { control: { type: "select", options: ["sm", "md", "lg"] } },
+    size: {
+      control: { type: "select", options: ["xs", "sm", "md", "lg", "xl"] },
+    },
     variant: {
       control: {
         type: "select",
@@ -24,7 +26,16 @@ export default {
     colorScheme: {
       control: {
         type: "select",
-        options: ["cyan", "gray"],
+        options: [
+          "brand",
+          "cyan",
+          "gray",
+          "red",
+          "orange",
+          "yellow",
+          "green",
+          "blue",
+        ],
       },
     },
   },
