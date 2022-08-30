@@ -1,3 +1,9 @@
 {
-  "conventionalCommits.scopes": ["storybook", "component", "button", "input"]
+  "conventionalCommits.scopes": [
+    "storybook",
+    "component",
+    "button",
+    "input",
+    "form"
+  ]
 }
