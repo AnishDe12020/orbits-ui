@@ -8,11 +8,11 @@ export const mainColors = {
     _dark: "#222222",
   },
   "brand.tertiary": {
-    default: "#bbbeca",
+    default: "#cecfd1",
     _dark: "#303030",
   },
   "brand.quaternary": {
-    default: "#fafafa",
+    default: "#bdbdc2",
     _dark: "#474747",
   },
 };

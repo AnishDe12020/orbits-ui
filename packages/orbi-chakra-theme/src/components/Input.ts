@@ -3,7 +3,7 @@ import {
   createMultiStyleConfigHelpers,
   defineStyle,
 } from "@chakra-ui/styled-system";
-import { getColor, mode } from "@chakra-ui/theme-tools";
+import { getColor } from "@chakra-ui/theme-tools";
 
 const { definePartsStyle, defineMultiStyleConfig } =
   createMultiStyleConfigHelpers(parts.keys);
@@ -137,9 +137,9 @@ const variantFilled = definePartsStyle(props => {
       },
     },
     addon: {
-      border: "2px solid",
-      borderColor: "transparent",
-      bg: mode("gray.100", "whiteAlpha.50")(props),
+      border: "1px solid",
+      borderColor: "brand.tertiary",
+      bg: "brand.secondary",
     },
   };
 });
@@ -158,6 +158,9 @@ const variantFlushed = definePartsStyle(props => {
       _readOnly: {
         boxShadow: "none !important",
         userSelect: "all",
+      },
+      _hover: {
+        borderColor: "brand.quaternary",
       },
       _invalid: {
         borderColor: getColor(theme, ec),
