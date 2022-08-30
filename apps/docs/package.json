@@ -9,32 +9,33 @@
     "clean": "rm -rf .turbo && rm -rf node_modules"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.2.6",
+    "@chakra-ui/react": "^2.3.1",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
-    "framer-motion": "^7.0.0",
+    "framer-motion": "^7.2.1",
     "orbi-chakra-theme": "*",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-feather": "^2.0.10"
   },
   "devDependencies": {
-    "@chakra-ui/cli": "^2.1.4",
-    "@chakra-ui/storybook-addon": "^4.0.6",
+    "@chakra-ui/cli": "^2.1.7",
+    "@chakra-ui/storybook-addon": "^4.0.10",
     "@storybook/addon-a11y": "^6.5.10",
-    "@storybook/addon-actions": "^6.4.18",
-    "@storybook/addon-docs": "^6.4.22",
-    "@storybook/addon-essentials": "^6.4.18",
-    "@storybook/addon-links": "^6.4.18",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-docs": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
     "@storybook/addons": "^6.5.10",
     "@storybook/builder-webpack5": "^6.5.10",
     "@storybook/manager-webpack5": "^6.5.10",
-    "@storybook/react": "^6.4.18",
+    "@storybook/react": "^6.5.10",
     "@storybook/theming": "^6.5.10",
     "chromatic": "^6.8.0",
     "eslint-config-orbi": "*",
     "orbi-tsconfig": "*",
-    "serve": "^13.0.2",
-    "typescript": "^4.5.4"
+    "serve": "^14.0.1",
+    "typescript": "^4.8.2"
   },
   "readme": "ERROR: No README data found!",
   "_id": "@acme/docs@0.0.0"
