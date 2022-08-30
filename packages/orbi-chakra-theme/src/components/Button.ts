@@ -1,5 +1,5 @@
 import { mode, transparentize } from "@chakra-ui/theme-tools";
-import type { SystemStyleFunction } from "@chakra-ui/styled-system";
+import { defineStyle, SystemStyleFunction } from "@chakra-ui/styled-system";
 import { SystemStyleObject } from "@chakra-ui/system";
 
 type AccessibleColor = {
@@ -155,30 +155,30 @@ const variants = {
 };
 
 const sizes: Record<string, SystemStyleObject> = {
-  lg: {
+  lg: defineStyle({
     h: 9,
     minW: 9,
     fontSize: "lg",
     px: 4,
-  },
-  md: {
+  }),
+  md: defineStyle({
     h: 8,
     minW: 8,
     fontSize: "md",
     px: 3,
-  },
-  sm: {
+  }),
+  sm: defineStyle({
     h: 7,
     minW: 7,
     fontSize: "sm",
     px: 2.5,
-  },
-  xs: {
+  }),
+  xs: defineStyle({
     h: 6,
     minW: 6,
     fontSize: "xs",
     px: 2,
-  },
+  }),
 };
 
 export const Button = {

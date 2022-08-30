@@ -1,4 +1,5 @@
 import { inputAnatomy as parts } from "@chakra-ui/anatomy";
+import { SystemStyleObject } from "@chakra-ui/react";
 import {
   createMultiStyleConfigHelpers,
   defineStyle,
@@ -24,30 +25,28 @@ const baseStyle = definePartsStyle({
   },
 });
 
-const size = {
+const size: Record<string, SystemStyleObject> = {
   lg: defineStyle({
+    h: 9,
     fontSize: "lg",
-    px: "4",
-    h: "12",
-    borderRadius: "md",
+    px: 4,
   }),
   md: defineStyle({
+    h: 8,
     fontSize: "md",
-    px: "4",
-    h: "10",
-    borderRadius: "md",
+    px: 3,
   }),
   sm: defineStyle({
+    h: 7,
     fontSize: "sm",
-    px: "3",
-    h: "8",
-    borderRadius: "sm",
+    px: 2.5,
+    borderRadius: "md",
   }),
   xs: defineStyle({
+    h: 6,
     fontSize: "xs",
-    px: "2",
-    h: "6",
-    borderRadius: "sm",
+    px: 2,
+    borderRadius: "md",
   }),
 };
 

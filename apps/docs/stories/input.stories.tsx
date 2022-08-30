@@ -3,6 +3,8 @@ import React from "react";
 import { ComponentMeta } from "@storybook/react";
 
 import {
+  Button,
+  Flex,
   Input,
   InputGroup,
   InputLeftAddon,
@@ -23,14 +25,18 @@ Disabled.args = {
   variant: "outline",
 };
 
-export const WithAddons = ({ size, variant, ...args }) => (
-  <InputGroup size={size} variant={variant}>
-    <InputLeftAddon>https://</InputLeftAddon>
-    <Input {...args} placeholder="With Addons" />
-    <InputRightAddon>.com</InputRightAddon>
-  </InputGroup>
+export const WithAddonsAndButton = ({ size, variant, ...args }) => (
+  <Flex experimental_spaceX={4}>
+    <InputGroup size={size} variant={variant}>
+      <InputLeftAddon>https://</InputLeftAddon>
+      <Input {...args} placeholder="With Addons" />
+      <InputRightAddon>.com</InputRightAddon>
+    </InputGroup>
+    <Button size={size}>Submit</Button>
+  </Flex>
 );
-WithAddons.args = {
+
+WithAddonsAndButton.args = {
   size: "md",
   variant: "outline",
 };
