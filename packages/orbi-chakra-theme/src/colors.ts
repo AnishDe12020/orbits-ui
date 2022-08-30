@@ -34,3 +34,24 @@ export const accentBlue = {
 
 // TODO: add proper accent colors for blue
 // TODO: add more accent colors - green, red, orange, purple, yellow, cyan, etc
+
+export const stateColors = {
+  "state.error": {
+    default: "red.400",
+    _dark: "red.600",
+  },
+  "state.success": {
+    default: "green.400",
+    _dark: "green.600",
+  },
+  "state.warning": {
+    default: "yellow.400",
+    _dark: "yellow.600",
+  },
+  "state.info": {
+    default: "blue.400",
+    _dark: "blue.600",
+  },
+};
+
+// TODO: make these colors better
