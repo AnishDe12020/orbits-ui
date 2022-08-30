@@ -31,6 +31,15 @@ const variantSolid: SystemStyleFunction = props => {
       border: "1px",
       borderColor: "brand.tertiary",
     };
+  } else if (c === "accent") {
+    return {
+      color: mode("black", "white")(props),
+      bg: "accent.primary",
+      border: "1px",
+      borderColor: "accent.primary",
+      _hover: { bg: "accent.secondary" },
+      _active: { bg: "accent.tertiary" },
+    };
   } else if (c === "gray") {
     return {
       color: mode(`inherit`, `whiteAlpha.900`)(props),

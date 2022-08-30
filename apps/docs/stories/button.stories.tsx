@@ -51,6 +51,7 @@ export default {
         type: "select",
         options: [
           "brand",
+          "accent",
           "cyan",
           "gray",
           "red",
