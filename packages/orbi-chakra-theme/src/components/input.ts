@@ -4,7 +4,6 @@ import {
   createMultiStyleConfigHelpers,
   defineStyle,
 } from "@chakra-ui/styled-system";
-import { getColor } from "@chakra-ui/theme-tools";
 
 const { definePartsStyle, defineMultiStyleConfig } =
   createMultiStyleConfigHelpers(parts.keys);
@@ -78,7 +77,6 @@ function getDefaults(props: Record<string, any>) {
 }
 
 const variantOutline = definePartsStyle(props => {
-  const { theme } = props;
   const { focusBorderColor: fc, errorBorderColor: ec } = getDefaults(props);
 
   return {
@@ -94,13 +92,13 @@ const variantOutline = definePartsStyle(props => {
         userSelect: "all",
       },
       _invalid: {
-        borderColor: getColor(theme, ec),
-        boxShadow: `0 0 0 1px ${getColor(theme, ec)}`,
+        borderColor: ec,
+        boxShadow: `0 0 0 1px ${ec}`,
       },
       _focusVisible: {
         zIndex: 1,
-        borderColor: getColor(theme, fc),
-        boxShadow: `0 0 0 1px ${getColor(theme, fc)}`,
+        borderColor: fc,
+        boxShadow: `0 0 0 1px ${fc}`,
       },
     },
     addon: {
@@ -112,7 +110,6 @@ const variantOutline = definePartsStyle(props => {
 });
 
 const variantFilled = definePartsStyle(props => {
-  const { theme } = props;
   const { focusBorderColor: fc, errorBorderColor: ec } = getDefaults(props);
 
   return {
@@ -128,11 +125,11 @@ const variantFilled = definePartsStyle(props => {
         userSelect: "all",
       },
       _invalid: {
-        borderColor: getColor(theme, ec),
+        borderColor: ec,
       },
       _focusVisible: {
         bg: "transparent",
-        borderColor: getColor(theme, fc),
+        borderColor: fc,
       },
     },
     addon: {
@@ -162,12 +159,12 @@ const variantFlushed = definePartsStyle(props => {
         borderColor: "brand.quaternary",
       },
       _invalid: {
-        borderColor: getColor(theme, ec),
-        boxShadow: `0px 1px 0px 0px ${getColor(theme, ec)}`,
+        borderColor: ec,
+        boxShadow: `0px 1px 0px 0px ${ec}`,
       },
       _focusVisible: {
-        borderColor: getColor(theme, fc),
-        boxShadow: `0px 1px 0px 0px ${getColor(theme, fc)}`,
+        borderColor: fc,
+        boxShadow: `0px 1px 0px 0px ${fc}`,
       },
     },
     addon: {

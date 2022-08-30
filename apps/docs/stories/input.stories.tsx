@@ -12,18 +12,10 @@ import {
 } from "@chakra-ui/react";
 
 export const Default = args => <Input {...args} placeholder="Default" />;
-Default.args = {
-  size: "md",
-  variant: "outline",
-};
 
 export const Disabled = args => (
   <Input {...args} isDisabled placeholder="Disabled" />
 );
-Disabled.args = {
-  size: "md",
-  variant: "outline",
-};
 
 export const WithAddonsAndButton = ({ size, variant, ...args }) => (
   <Flex experimental_spaceX={4}>
@@ -36,10 +28,9 @@ export const WithAddonsAndButton = ({ size, variant, ...args }) => (
   </Flex>
 );
 
-WithAddonsAndButton.args = {
-  size: "md",
-  variant: "outline",
-};
+export const Invalid = args => (
+  <Input {...args} isInvalid placeholder="Invalid" />
+);
 
 export default {
   title: "Input",
@@ -54,5 +45,9 @@ export default {
         options: ["outline", "filled", "flushed", "unstyled"],
       },
     },
+  },
+  args: {
+    size: "md",
+    variant: "outline",
   },
 } as ComponentMeta<typeof Input>;
