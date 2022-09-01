@@ -37,21 +37,19 @@ export const accentBlue = {
 
 export const stateColors = {
   "state.error": {
-    default: "red.400",
-    _dark: "red.500",
+    default: "#fc0f0f",
+    _dark: "#c90101",
   },
   "state.success": {
-    default: "green.400",
-    _dark: "green.500",
+    default: "#32ff6f",
+    _dark: "#07d154",
   },
   "state.warning": {
-    default: "yellow.400",
-    _dark: "yellow.500",
+    default: "#f7b347",
+    _dark: "#be940c",
   },
   "state.info": {
-    default: "blue.400",
-    _dark: "blue.500",
+    default: "#2388fc",
+    _dark: "#0667dd",
   },
 };
-
-// TODO: make these colors better
