@@ -2,6 +2,7 @@ import {
   mainColors,
   components,
   accentBlue,
+  accentBlueTokens,
   stateColors,
 } from "../../../packages/orbi-chakra-theme/src/index";
 
@@ -37,8 +38,9 @@ export const parameters = {
   chakra: {
     theme: {
       components,
+      colors: { ...accentBlue },
       semanticTokens: {
-        colors: { ...mainColors, ...accentBlue, ...stateColors },
+        colors: { ...mainColors, ...accentBlueTokens, ...stateColors },
       },
       styles: {
         global: {

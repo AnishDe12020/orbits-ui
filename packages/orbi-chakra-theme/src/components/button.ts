@@ -33,7 +33,7 @@ const variantSolid: SystemStyleFunction = props => {
     };
   } else if (c === "accent") {
     return {
-      color: mode("black", "white")(props),
+      color: "white",
       bg: "accent.primary",
       border: "1px",
       borderColor: "accent.primary",

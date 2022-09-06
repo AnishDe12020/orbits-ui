@@ -17,18 +17,48 @@ export const mainColors = {
   },
 };
 
+// export const accentBlue = {
+//   "accent.primary": {
+//     default: "#1e88e5",
+//     _dark: "#1e88e5",
+//   },
+//   "accent.secondary": {
+//     default: "#1565c0",
+//     _dark: "#1565c0",
+//   },
+//   "accent.tertiary": {
+//     default: "#0d47a1",
+//     _dark: "#0d47a1",
+//   },
+// };
+
 export const accentBlue = {
+  accent: {
+    50: "#dff2ff",
+    100: "#b3d4ff",
+    200: "#84b7fb",
+    300: "#549af6",
+    400: "#267ef2",
+    500: "#0d64d9",
+    600: "#044eaa",
+    700: "#00387a",
+    800: "#00214c",
+    900: "#000c1f",
+  },
+};
+
+export const accentBlueTokens = {
   "accent.primary": {
-    default: "#1e88e5",
-    _dark: "#1e88e5",
+    default: "accent.600",
+    _dark: "accent.400",
   },
   "accent.secondary": {
-    default: "#1565c0",
-    _dark: "#1565c0",
+    default: "accent.500",
+    _dark: "accent.300",
   },
   "accent.tertiary": {
-    default: "#0d47a1",
-    _dark: "#0d47a1",
+    default: "accent.400",
+    _dark: "accent.200",
   },
 };
 
