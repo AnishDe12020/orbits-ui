@@ -76,7 +76,7 @@ function getDefaults(props: Record<string, any>) {
   };
 }
 
-const variantOutline = definePartsStyle(props => {
+const variantOutline = definePartsStyle((props) => {
   const { focusBorderColor: fc, errorBorderColor: ec } = getDefaults(props);
 
   return {
@@ -109,7 +109,7 @@ const variantOutline = definePartsStyle(props => {
   };
 });
 
-const variantFilled = definePartsStyle(props => {
+const variantFilled = definePartsStyle((props) => {
   const { focusBorderColor: fc, errorBorderColor: ec } = getDefaults(props);
 
   return {
@@ -140,7 +140,7 @@ const variantFilled = definePartsStyle(props => {
   };
 });
 
-const variantFlushed = definePartsStyle(props => {
+const variantFlushed = definePartsStyle((props) => {
   const { theme } = props;
   const { focusBorderColor: fc, errorBorderColor: ec } = getDefaults(props);
 

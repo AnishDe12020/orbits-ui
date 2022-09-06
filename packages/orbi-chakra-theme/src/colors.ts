@@ -68,7 +68,7 @@ export const accentBlueTokens = {
 export const stateColors = {
   "state.error": {
     default: "#fc0f0f",
-    _dark: "#c90101",
+    _dark: "#f55f4e",
   },
   "state.success": {
     default: "#32ff6f",
