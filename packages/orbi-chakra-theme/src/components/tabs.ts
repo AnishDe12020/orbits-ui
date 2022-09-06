@@ -192,18 +192,46 @@ const variantSolidRounded = definePartsStyle(props => {
   };
 });
 
-const variantWrapped = definePartsStyle(() => {
+const variantWrapped = definePartsStyle(props => {
   return {
     tab: {
       borderRadius: "md",
       fontWeight: "semibold",
-      color: "gray.300",
+      color: mode("gray.700", "gray.300")(props),
       _selected: {
-        color: `white`,
+        color: mode("gray.900", "white")(props),
         bg: `brand.tertiary`,
       },
       _hover: {
         bg: "brand.tertiary",
+      },
+    },
+    tablist: {
+      borderRadius: "md",
+      backgroundColor: "brand.secondary",
+      py: 2,
+      px: 2,
+      experimental_spaceX: 2,
+      borderStyle: "solid",
+      borderWidth: "1px",
+      borderColor: "brand.tertiary",
+    },
+  };
+});
+
+const variantWrappedColored = definePartsStyle(props => {
+  const { colorScheme: c } = props;
+  return {
+    tab: {
+      borderRadius: "md",
+      fontWeight: "semibold",
+      color: mode("gray.700", "gray.300")(props),
+      _selected: {
+        color: "white",
+        bg: `${c}.600`,
+      },
+      _hover: {
+        bg: `${c}.600`,
       },
     },
     tablist: {
@@ -228,6 +256,7 @@ const variants = {
   "soft-rounded": variantSoftRounded,
   "solid-rounded": variantSolidRounded,
   wrapped: variantWrapped,
+  "wrapped-colored": variantWrappedColored,
   unstyled: variantUnstyled,
 };
 

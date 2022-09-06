@@ -41,6 +41,7 @@ export default {
           "soft-rounded",
           "solid-rounded",
           "wrapped",
+          "wrapped-colored",
           "unstyled",
         ],
       },
