@@ -4,6 +4,7 @@ import FormControl from "./form-control";
 import FormError from "./form-error";
 import Modal from "./modal";
 import Tooltip from "./tooltip";
+import Tabs from "./tabs";
 
 export { Button };
 export { Input };
@@ -11,6 +12,7 @@ export { FormControl };
 export { FormError };
 export { Modal };
 export { Tooltip };
+export { Tabs };
 
 export const components = {
   Button,
@@ -19,4 +21,5 @@ export const components = {
   FormError,
   Modal,
   Tooltip,
+  Tabs,
 };
