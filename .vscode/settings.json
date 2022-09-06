@@ -4,6 +4,7 @@
     "component",
     "button",
     "input",
-    "form"
+    "form",
+    "modal"
   ]
 }
