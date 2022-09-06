@@ -5,6 +5,7 @@
     "button",
     "input",
     "form",
-    "modal"
+    "modal",
+    "tooltip"
   ]
 }
