@@ -76,12 +76,12 @@ function getDefaults(props: Record<string, any>) {
   };
 }
 
-const variantOutline = definePartsStyle((props) => {
+const variantOutline = definePartsStyle(props => {
   const { focusBorderColor: fc, errorBorderColor: ec } = getDefaults(props);
 
   return {
     field: {
-      border: "1px solid",
+      border: "2px solid",
       borderColor: "brand.tertiary",
       bg: "inherit",
       _hover: {
@@ -102,19 +102,19 @@ const variantOutline = definePartsStyle((props) => {
       },
     },
     addon: {
-      border: "1px solid",
+      border: "2px solid",
       borderColor: "brand.tertiary",
       bg: "brand.secondary",
     },
   };
 });
 
-const variantFilled = definePartsStyle((props) => {
+const variantFilled = definePartsStyle(props => {
   const { focusBorderColor: fc, errorBorderColor: ec } = getDefaults(props);
 
   return {
     field: {
-      border: "1px solid",
+      border: "2px solid",
       borderColor: "brand.tertiary",
       bg: "brand.secondary",
       _hover: {
@@ -133,20 +133,20 @@ const variantFilled = definePartsStyle((props) => {
       },
     },
     addon: {
-      border: "1px solid",
+      border: "2px solid",
       borderColor: "brand.tertiary",
       bg: "brand.secondary",
     },
   };
 });
 
-const variantFlushed = definePartsStyle((props) => {
+const variantFlushed = definePartsStyle(props => {
   const { theme } = props;
   const { focusBorderColor: fc, errorBorderColor: ec } = getDefaults(props);
 
   return {
     field: {
-      borderBottom: "1px solid",
+      borderBottom: "2px solid",
       borderColor: "brand.tertiary",
       borderRadius: "0",
       px: "2",
@@ -168,7 +168,7 @@ const variantFlushed = definePartsStyle((props) => {
       },
     },
     addon: {
-      borderBottom: "1px solid",
+      borderBottom: "2px solid",
       borderColor: "brand.tertiary",
       borderRadius: "0",
       px: "2",
