@@ -1,5 +1,5 @@
 {
-  "name": "@acme/docs",
+  "name": "@orbits-ui/storybook",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -13,7 +13,7 @@
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
     "framer-motion": "^7.2.1",
-    "orbi-chakra-theme": "*",
+    "@orbits-ui/chakra-theme": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.10"
@@ -32,8 +32,8 @@
     "@storybook/react": "^6.5.10",
     "@storybook/theming": "^6.5.10",
     "chromatic": "^6.8.0",
-    "eslint-config-orbi": "*",
-    "orbi-tsconfig": "*",
+    "@orbits-ui/eslint-config": "*",
+    "@orbits-ui/tsconfig": "*",
     "serve": "^14.0.1",
     "typescript": "^4.8.2"
   },

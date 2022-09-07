@@ -20,6 +20,11 @@ module.exports = {
       type: "javascript/auto",
     });
 
+    config.resolve.alias["@orbits-ui/chakra-theme"] = path.resolve(
+      __dirname,
+      "../../../packages/chakra-theme/"
+    );
+
     return config;
   },
 };

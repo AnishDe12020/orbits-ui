@@ -4,7 +4,7 @@ import {
   accentBlue,
   accentBlueTokens,
   stateColors,
-} from "../../../packages/orbi-chakra-theme/src/index";
+} from "@orbits-ui/chakra-theme";
 
 // import * as React from "react";
 // import {
