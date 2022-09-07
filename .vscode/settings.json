@@ -8,6 +8,7 @@
     "modal",
     "tooltip",
     "tabs",
-    "colors"
+    "colors",
+    "chakra-theme"
   ]
 }
