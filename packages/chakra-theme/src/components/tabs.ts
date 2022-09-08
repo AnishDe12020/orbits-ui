@@ -8,14 +8,14 @@ import { getColor, mode } from "@chakra-ui/theme-tools";
 const { defineMultiStyleConfig, definePartsStyle } =
   createMultiStyleConfigHelpers(parts.keys);
 
-const baseStyleRoot = defineStyle(props => {
+const baseStyleRoot = defineStyle((props) => {
   const { orientation } = props;
   return {
     display: orientation === "vertical" ? "flex" : "block",
   };
 });
 
-const baseStyleTab = defineStyle(props => {
+const baseStyleTab = defineStyle((props) => {
   const { isFitted } = props;
 
   return {
@@ -33,7 +33,7 @@ const baseStyleTab = defineStyle(props => {
   };
 });
 
-const baseStyleTablist = defineStyle(props => {
+const baseStyleTablist = defineStyle((props) => {
   const { align = "start", orientation } = props;
 
   const alignments: Record<string, string> = {
@@ -52,7 +52,7 @@ const baseStyleTabpanel = defineStyle({
   p: 4,
 });
 
-const baseStyle = definePartsStyle(props => ({
+const baseStyle = definePartsStyle((props) => ({
   root: baseStyleRoot(props),
   tab: baseStyleTab(props),
   tablist: baseStyleTablist(props),
@@ -83,7 +83,7 @@ const sizes = {
   }),
 };
 
-const variantLine = definePartsStyle(props => {
+const variantLine = definePartsStyle((props) => {
   const { colorScheme: c, orientation } = props;
   const isVertical = orientation === "vertical";
   const borderProp =
@@ -113,7 +113,7 @@ const variantLine = definePartsStyle(props => {
   };
 });
 
-const variantEnclosed = definePartsStyle(props => {
+const variantEnclosed = definePartsStyle((props) => {
   const { colorScheme: c } = props;
   return {
     tab: {
@@ -135,7 +135,7 @@ const variantEnclosed = definePartsStyle(props => {
   };
 });
 
-const variantEnclosedColored = definePartsStyle(props => {
+const variantEnclosedColored = definePartsStyle((props) => {
   const { colorScheme: c } = props;
   return {
     tab: {
@@ -162,7 +162,7 @@ const variantEnclosedColored = definePartsStyle(props => {
   };
 });
 
-const variantSoftRounded = definePartsStyle(props => {
+const variantSoftRounded = definePartsStyle((props) => {
   const { colorScheme: c, theme } = props;
   return {
     tab: {
@@ -177,7 +177,7 @@ const variantSoftRounded = definePartsStyle(props => {
   };
 });
 
-const variantSolidRounded = definePartsStyle(props => {
+const variantSolidRounded = definePartsStyle((props) => {
   const { colorScheme: c } = props;
   return {
     tab: {
@@ -192,7 +192,7 @@ const variantSolidRounded = definePartsStyle(props => {
   };
 });
 
-const variantWrapped = definePartsStyle(props => {
+const variantWrapped = definePartsStyle((props) => {
   return {
     tab: {
       borderRadius: "md",
@@ -219,7 +219,7 @@ const variantWrapped = definePartsStyle(props => {
   };
 });
 
-const variantWrappedColored = definePartsStyle(props => {
+const variantWrappedColored = definePartsStyle((props) => {
   const { colorScheme: c } = props;
   return {
     tab: {
@@ -231,6 +231,7 @@ const variantWrappedColored = definePartsStyle(props => {
         bg: `${c}.600`,
       },
       _hover: {
+        color: "white",
         bg: `${c}.600`,
       },
     },
