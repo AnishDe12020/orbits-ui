@@ -9,6 +9,7 @@
     "tooltip",
     "tabs",
     "colors",
-    "chakra-theme"
+    "chakra-theme",
+    "changesets"
   ]
 }
