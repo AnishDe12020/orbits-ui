@@ -14,7 +14,7 @@ import {
   PopoverTrigger,
 } from "@chakra-ui/react";
 
-export const Default = args => {
+export const Default = (args) => {
   return (
     <Popover {...args}>
       <PopoverTrigger>

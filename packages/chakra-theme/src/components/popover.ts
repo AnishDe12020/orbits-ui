@@ -14,7 +14,7 @@ const $arrowShadowColor = cssVar("popper-arrow-shadow-color");
 
 const baseStylePopper = defineStyle({ zIndex: 10 });
 
-const baseStyleContent = defineStyle(props => {
+const baseStyleContent = defineStyle((props) => {
   const bg = "brand.secondary";
   const shadowColor = mode("gray.200", "whiteAlpha.300")(props);
 
@@ -23,7 +23,6 @@ const baseStyleContent = defineStyle(props => {
     bg: $popperBg.reference,
     [$arrowBg.variable]: $popperBg.reference,
     [$arrowShadowColor.variable]: `colors.${shadowColor}`,
-    color: "gray.200",
     width: "xs",
     border: "1px solid",
     borderColor: "brand.tertiary",
@@ -64,7 +63,7 @@ const baseStyleCloseButton = defineStyle({
   padding: 2,
 });
 
-const baseStyle = definePartsStyle(props => ({
+const baseStyle = definePartsStyle((props) => ({
   popper: baseStylePopper,
   content: baseStyleContent(props),
   header: baseStyleHeader,
