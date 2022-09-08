@@ -19,7 +19,7 @@ const accessibleColorMap: { [key: string]: AccessibleColor } = {
   },
 };
 
-const variantSolid: SystemStyleFunction = (props) => {
+const variantSolid: SystemStyleFunction = props => {
   const { colorScheme: c } = props;
 
   if (c === "brand") {
@@ -72,7 +72,7 @@ const variantSolid: SystemStyleFunction = (props) => {
   };
 };
 
-const variantLink: SystemStyleFunction = (props) => {
+const variantLink: SystemStyleFunction = props => {
   const { colorScheme: c } = props;
   return {
     padding: 0,
@@ -98,7 +98,7 @@ const variantLink: SystemStyleFunction = (props) => {
   };
 };
 
-const variantGhost: SystemStyleFunction = (props) => {
+const variantGhost: SystemStyleFunction = props => {
   const { colorScheme: c, theme } = props;
 
   if (c === "gray" || c === "brand") {
@@ -130,7 +130,7 @@ const variantGhost: SystemStyleFunction = (props) => {
   };
 };
 
-const variantOutline: SystemStyleFunction = (props) => {
+const variantOutline: SystemStyleFunction = props => {
   const { colorScheme: c } = props;
   const borderColor = mode(`gray.200`, `whiteAlpha.300`)(props);
   return {
@@ -145,6 +145,7 @@ const variantOutline: SystemStyleFunction = (props) => {
 
 const defaultProps = {
   colorScheme: "brand",
+  variant: "solid",
 };
 
 const variants = {

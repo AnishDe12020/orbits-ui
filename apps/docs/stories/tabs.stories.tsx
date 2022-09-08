@@ -69,7 +69,8 @@ export default {
     },
   },
   args: {
-    variant: "line",
+    variant: "wrapped",
     size: "md",
+    colorScheme: "accent",
   },
 } as ComponentMeta<typeof Tabs>;
