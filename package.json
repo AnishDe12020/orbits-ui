@@ -14,7 +14,8 @@
     "version-packages": "changeset version",
     "release": "turbo run build --filter=\"@orbits-ui/storybook^...\" && changeset publish",
     "prepare": "husky install",
-    "build:packages": "turbo run build --filter=\"@orbits-ui/storybook^...\""
+    "build:packages": "turbo run build --filter=\"@orbits-ui/storybook^...\"",
+    "dev:docs": "turbo run dev --filter=\"@orbits-ui/docs\""
   },
   "devDependencies": {
     "@changesets/cli": "^2.24.4",

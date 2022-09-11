@@ -1,0 +1,33 @@
+{
+  "name": "@orbits-ui/docs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "gen:theme-typings": "chakra-cli tokens \"src/theme/index.ts\"",
+    "postinstall": "yarn gen:theme-typings"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.3.2",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@orbits-ui/chakra-theme": "*",
+		"@radix-ui/react-icons": "^1.1.1",
+    "framer-motion": "^7.3.2",
+    "next": "12.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@chakra-ui/cli": "^2.1.7",
+    "@types/node": "18.7.16",
+    "@types/react": "18.0.19",
+    "@types/react-dom": "18.0.6",
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.3.0",
+    "typescript": "4.8.3"
+  }
+}

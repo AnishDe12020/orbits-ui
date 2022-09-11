@@ -26,7 +26,7 @@ export default {
     variant: {
       control: {
         type: "select",
-        options: ["solid", "outline", "ghost", "link"],
+        options: ["solid", "solid-border", "outline", "ghost", "link"],
       },
     },
     colorScheme: {

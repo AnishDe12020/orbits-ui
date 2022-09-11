@@ -1,6 +1,27 @@
 import { mode, transparentize } from "@chakra-ui/theme-tools";
-import { defineStyle, SystemStyleFunction } from "@chakra-ui/styled-system";
+import { defineStyle, defineStyleConfig } from "@chakra-ui/styled-system";
 import { SystemStyleObject } from "@chakra-ui/system";
+
+const baseStyle = defineStyle({
+  lineHeight: "1.2",
+  borderRadius: "md",
+  fontWeight: "semibold",
+  transitionProperty: "common",
+  transitionDuration: "normal",
+  _focusVisible: {
+    boxShadow: "outline",
+  },
+  _disabled: {
+    opacity: 0.4,
+    cursor: "not-allowed",
+    boxShadow: "none",
+  },
+  _hover: {
+    _disabled: {
+      bg: "initial",
+    },
+  },
+});
 
 type AccessibleColor = {
   bg?: string;
@@ -19,7 +40,7 @@ const accessibleColorMap: { [key: string]: AccessibleColor } = {
   },
 };
 
-const variantSolid: SystemStyleFunction = props => {
+const variantSolid = defineStyle(props => {
   const { colorScheme: c } = props;
 
   if (c === "brand") {
@@ -28,25 +49,26 @@ const variantSolid: SystemStyleFunction = props => {
       bg: "brand.secondary",
       _hover: { bg: "brand.tertiary" },
       _active: { bg: "brand.quaternary" },
-      border: "1px",
-      borderColor: "brand.tertiary",
     };
   } else if (c === "accent") {
     return {
       color: "white",
       bg: "accent.primary",
-      border: "1px",
-      borderColor: "accent.primary",
       _hover: { bg: "accent.secondary" },
       _active: { bg: "accent.tertiary" },
     };
   } else if (c === "gray") {
+    const bg = mode(`gray.100`, `whiteAlpha.200`)(props);
+
     return {
-      color: mode(`inherit`, `whiteAlpha.900`)(props),
+      bg,
       _hover: {
-        bg: mode(`gray.300`, `gray.700`)(props),
+        bg: mode(`gray.200`, `whiteAlpha.300`)(props),
+        _disabled: {
+          bg,
+        },
       },
-      _active: { bg: mode(`gray.200`, `whiteAlpha.300`)(props) },
+      _active: { bg: mode(`gray.300`, `whiteAlpha.400`)(props) },
     };
   }
 
@@ -70,9 +92,67 @@ const variantSolid: SystemStyleFunction = props => {
     },
     _active: { bg: mode(activeBg, `${c}.500`)(props) },
   };
-};
+});
 
-const variantLink: SystemStyleFunction = props => {
+const variantSolidBorder = defineStyle(props => {
+  const { colorScheme: c } = props;
+
+  if (c === "brand") {
+    return {
+      color: mode("black", "white")(props),
+      bg: "brand.secondary",
+      _hover: { bg: "brand.tertiary", borderColor: "brand.quaternary" },
+      _active: { bg: "brand.quaternary" },
+      border: "1px solid",
+      borderColor: "brand.tertiary",
+    };
+  } else if (c === "accent") {
+    return {
+      color: "white",
+      bg: "accent.primary",
+      border: "1px",
+      borderColor: "accent.secondary",
+      _hover: { bg: "accent.secondary", borderColor: "accent.tertiary" },
+      _active: { bg: "accent.tertiary" },
+    };
+  } else if (c === "gray") {
+    const bg = mode(`gray.100`, `whiteAlpha.200`)(props);
+
+    return {
+      bg,
+      _hover: {
+        bg: mode(`gray.200`, `whiteAlpha.300`)(props),
+        _disabled: {
+          bg,
+        },
+      },
+      _active: { bg: mode(`gray.300`, `whiteAlpha.400`)(props) },
+    };
+  }
+
+  const {
+    bg = `${c}.500`,
+    color = "white",
+    hoverBg = `${c}.600`,
+    activeBg = `${c}.700`,
+  } = accessibleColorMap[c] ?? {};
+
+  const background = mode(bg, `${c}.300`)(props);
+
+  return {
+    bg: background,
+    color: mode(color, `gray.800`)(props),
+    _hover: {
+      bg: mode(hoverBg, `${c}.400`)(props),
+      _disabled: {
+        bg: background,
+      },
+    },
+    _active: { bg: mode(activeBg, `${c}.500`)(props) },
+  };
+});
+
+const variantLink = defineStyle(props => {
   const { colorScheme: c } = props;
   return {
     padding: 0,
@@ -96,19 +176,26 @@ const variantLink: SystemStyleFunction = props => {
           : mode(`${c}.900`, `${c}.500`)(props), // TODO: make this accent color or smth
     },
   };
-};
+});
 
-const variantGhost: SystemStyleFunction = props => {
+const variantGhost = defineStyle(props => {
   const { colorScheme: c, theme } = props;
 
-  if (c === "gray" || c === "brand") {
-    // TODO: Use accent for brand? IDK
+  if (c === "gray") {
     return {
       color: mode(`inherit`, `whiteAlpha.900`)(props),
       _hover: {
         bg: mode(`gray.200`, `whiteAlpha.300`)(props),
       },
       _active: { bg: mode(`gray.200`, `whiteAlpha.300`)(props) },
+    };
+  } else if (c === "brand") {
+    return {
+      color: mode(`inherit`, `whiteAlpha.900`)(props),
+      _hover: {
+        bg: "brand.secondary",
+      },
+      _active: { bg: "brand.quaternary" },
     };
   }
 
@@ -128,28 +215,34 @@ const variantGhost: SystemStyleFunction = props => {
       bg: mode(lightActiveBg, darkActiveBg)(props),
     },
   };
-};
+});
 
-const variantOutline: SystemStyleFunction = props => {
+const variantOutline = defineStyle(props => {
   const { colorScheme: c } = props;
-  const borderColor = mode(`gray.200`, `whiteAlpha.300`)(props);
+  let borderColor;
+  if (c === "gray") {
+    borderColor = mode(`gray.200`, `whiteAlpha.300`)(props);
+  } else if (c === "brand") {
+    borderColor = "brand.quaternary";
+  } else if (c === "accent") {
+    borderColor = "accent.primary";
+  } else {
+    borderColor = "currentColor";
+  }
+
   return {
     border: "1px solid",
-    borderColor: c === "gray" || c === "brand" ? borderColor : "currentColor", // TODO: Use accent for brand? IDK
+    borderColor: borderColor,
     ".chakra-button__group[data-attached] > &:not(:last-of-type)": {
       marginEnd: "-1px",
     },
     ...variantGhost(props),
   };
-};
-
-const defaultProps = {
-  colorScheme: "brand",
-  variant: "solid",
-};
+});
 
 const variants = {
   solid: variantSolid,
+  "solid-border": variantSolidBorder,
   link: variantLink,
   ghost: variantGhost,
   outline: variantOutline,
@@ -182,18 +275,15 @@ const sizes: Record<string, SystemStyleObject> = {
   }),
 };
 
-export const Button = {
-  baseStyle: {
-    transition: "transform 0.08s ease-out, background 0.3s, opacity 0.3s",
-    _active: { transform: "scale(0.99)" },
-    _disabled: {
-      opacity: 0.5,
-      cursor: "not-allowed",
-    },
-  },
+export const buttonTheme = defineStyleConfig({
+  baseStyle,
   variants,
-  defaultProps,
   sizes,
-};
+  defaultProps: {
+    variant: "solid",
+    size: "md",
+    colorScheme: "brand",
+  },
+});
 
-export default Button;
+export default buttonTheme;
