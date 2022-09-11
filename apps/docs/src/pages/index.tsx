@@ -31,7 +31,11 @@ const Home: NextPage = () => {
     <Container as={Center} mt={16}>
       <VStack spacing={16}>
         <VStack spacing={4}>
-          <Heading as="h1" fontSize="7xl">
+          <Heading
+            as="h1"
+            fontSize="7xl"
+            color={useColorModeValue("cyan.700", "cyan.500")}
+          >
             Orbits UI
           </Heading>
           <Heading
@@ -39,7 +43,7 @@ const Home: NextPage = () => {
             textColor={useColorModeValue("gray.700", "gray.300")}
             fontSize="3xl"
           >
-            A Chakra UI Theme
+            A Chakra UI Theme.
           </Heading>
         </VStack>
 
@@ -58,7 +62,10 @@ const Home: NextPage = () => {
           textAlign="center"
           role="group"
         >
-          <Text textColor={useColorModeValue("gray.700", "gray.300")}>
+          <Text
+            textColor={useColorModeValue("gray.700", "gray.300")}
+            fontFamily="mono"
+          >
             <chakra.span textColor="green.400">{COMMAND}</chakra.span>{" "}
             {PACKAGES}
           </Text>
