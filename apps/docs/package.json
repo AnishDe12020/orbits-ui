@@ -8,14 +8,14 @@
     "start": "next start",
     "lint": "next lint",
     "gen:theme-typings": "chakra-cli tokens \"src/theme/index.ts\"",
-    "postinstall": "yarn gen:theme-typings"
+    "postinstall": " cd ../../ && yarn build:packages && cd apps/docs && yarn gen:theme-typings"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.3.2",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@orbits-ui/chakra-theme": "*",
-		"@radix-ui/react-icons": "^1.1.1",
+    "@radix-ui/react-icons": "^1.1.1",
     "framer-motion": "^7.3.2",
     "next": "12.3.0",
     "react": "18.2.0",
