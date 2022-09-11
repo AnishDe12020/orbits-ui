@@ -12,6 +12,7 @@ import {
   Text,
   chakra,
   Flex,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { CheckIcon, CopyIcon } from "@radix-ui/react-icons";
 import type { NextPage } from "next";
@@ -33,7 +34,11 @@ const Home: NextPage = () => {
           <Heading as="h1" fontSize="7xl">
             Orbits UI
           </Heading>
-          <Heading as="h2" textColor="gray.300" fontSize="3xl">
+          <Heading
+            as="h2"
+            textColor={useColorModeValue("gray.700", "gray.300")}
+            fontSize="3xl"
+          >
             A Chakra UI Theme
           </Heading>
         </VStack>
@@ -53,12 +58,16 @@ const Home: NextPage = () => {
           textAlign="center"
           role="group"
         >
-          <Text textColor="gray.300">
+          <Text textColor={useColorModeValue("gray.700", "gray.300")}>
             <chakra.span textColor="green.400">{COMMAND}</chakra.span>{" "}
             {PACKAGES}
           </Text>
           <chakra.span
-            bg={hasCopiedInstallCommand ? "green.600" : "brand.tertiary"}
+            bg={
+              hasCopiedInstallCommand
+                ? useColorModeValue("green.400", "green.600")
+                : "brand.tertiary"
+            }
             rounded="full"
             w={8}
             h={8}
