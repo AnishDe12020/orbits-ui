@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Getting Started with Orbits UI",
+    "body": {
+      "raw": "\n# Getting Started with Orbits UI\n\nlorem ipsum dolor sit amet\n",
+      "code": "var Component=(()=>{var h=Object.create;var o=Object.defineProperty;var x=Object.getOwnPropertyDescriptor;var l=Object.getOwnPropertyNames;var u=Object.getPrototypeOf,j=Object.prototype.hasOwnProperty;var p=(t,n)=>()=>(n||t((n={exports:{}}).exports,n),n.exports),_=(t,n)=>{for(var r in n)o(t,r,{get:n[r],enumerable:!0})},a=(t,n,r,i)=>{if(n&&typeof n==\"object\"||typeof n==\"function\")for(let s of l(n))!j.call(t,s)&&s!==r&&o(t,s,{get:()=>n[s],enumerable:!(i=x(n,s))||i.enumerable});return t};var g=(t,n,r)=>(r=t!=null?h(u(t)):{},a(n||!t||!t.__esModule?o(r,\"default\",{value:t,enumerable:!0}):r,t)),f=t=>a(o({},\"__esModule\",{value:!0}),t);var m=p((D,c)=>{c.exports=_jsx_runtime});var M={};_(M,{default:()=>w,frontmatter:()=>b});var e=g(m()),b={title:\"Getting Started with Orbits UI\"};function d(t){let n=Object.assign({h1:\"h1\",p:\"p\"},t.components);return(0,e.jsxs)(e.Fragment,{children:[(0,e.jsx)(n.h1,{children:\"Getting Started with Orbits UI\"}),`\n`,(0,e.jsx)(n.p,{children:\"lorem ipsum dolor sit amet\"})]})}function O(t={}){let{wrapper:n}=t.components||{};return n?(0,e.jsx)(n,Object.assign({},t,{children:(0,e.jsx)(d,t)})):d(t)}var w=O;return f(M);})();\n;return Component;"
+    },
+    "_id": "guides/getting-started.mdx",
+    "_raw": {
+      "sourceFilePath": "guides/getting-started.mdx",
+      "sourceFileName": "getting-started.mdx",
+      "sourceFileDir": "guides",
+      "contentType": "mdx",
+      "flattenedPath": "guides/getting-started"
+    },
+    "type": "Guide",
+    "slug": "getting-started"
+  }
+]
