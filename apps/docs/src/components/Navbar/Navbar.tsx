@@ -15,8 +15,11 @@ const Navbar = () => {
     <HStack
       as="nav"
       justifyContent="end"
-      my={8}
-      mx={{ base: 8, md: 16, lg: 32 }}
+      pt={4}
+      pb={4}
+      px={{ base: 8, md: 16, lg: 24 }}
+      borderBottom="1px solid"
+      borderBottomColor="brand.secondary"
     >
       <IconButton
         aria-label={`Change to ${nextColorMode} mode`}

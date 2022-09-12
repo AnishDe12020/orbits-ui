@@ -9,6 +9,8 @@ import {
 } from "@chakra-ui/react";
 import { allGuides, Guide } from ".contentlayer/generated";
 import NextLink from "next/link";
+import TheSideBar from "src/components/TheSideBar/TheSideBar";
+import ContentLayout from "src/layouts/ContentLayout";
 
 interface IGuidePageProps {
   guides: Guide[];
@@ -16,14 +18,7 @@ interface IGuidePageProps {
 
 const GuidesPage: NextPage<IGuidePageProps> = ({ guides }) => {
   return (
-    <Container>
-      <Heading
-        as="h1"
-        fontSize="7xl"
-        color={useColorModeValue("cyan.700", "cyan.500")}
-      >
-        Guides
-      </Heading>
+    <ContentLayout>
       <VStack mt={6}>
         {guides.map(guide => {
           return (
@@ -56,7 +51,7 @@ const GuidesPage: NextPage<IGuidePageProps> = ({ guides }) => {
           );
         })}
       </VStack>
-    </Container>
+    </ContentLayout>
   );
 };
 
