@@ -1,3 +1,4 @@
+import { Box, Container } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import Navbar from "src/components/Navbar/Navbar";
 
@@ -7,10 +8,10 @@ interface IMainLayoutProps {
 
 const MainLayout = ({ children }: IMainLayoutProps) => {
   return (
-    <>
+    <Box>
       <Navbar />
       {children}
-    </>
+    </Box>
   );
 };
 
