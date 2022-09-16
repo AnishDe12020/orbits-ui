@@ -120,6 +120,8 @@ const variantSolidBorder = defineStyle(props => {
 
     return {
       bg,
+      border: "1px solid",
+      borderColor: mode(`gray.200`, `whiteAlpha.300`)(props),
       _hover: {
         bg: mode(`gray.200`, `whiteAlpha.300`)(props),
         _disabled: {
@@ -137,11 +139,13 @@ const variantSolidBorder = defineStyle(props => {
     activeBg = `${c}.700`,
   } = accessibleColorMap[c] ?? {};
 
-  const background = mode(bg, `${c}.300`)(props);
+  const background = mode(bg, `${c}.400`)(props);
 
   return {
     bg: background,
     color: mode(color, `gray.800`)(props),
+    border: "1px solid",
+    borderColor: mode(`${c}.600`, `${c}.300`)(props),
     _hover: {
       bg: mode(hoverBg, `${c}.400`)(props),
       _disabled: {
