@@ -1,5 +1,11 @@
 # @orbits-ui/chakra-theme
 
+## 0.2.1
+
+### Patch Changes
+
+- dbd2ef8: add a solid border variant to button
+
 ## 0.2.0
 
 ### Minor Changes
