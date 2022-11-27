@@ -10,10 +10,10 @@ import {
   Input,
 } from "@chakra-ui/react";
 
-export const Default = args => {
+export const Default = (args) => {
   const [input, setInput] = useState("a@b.com");
 
-  const handleInputChange = e => setInput(e.target.value);
+  const handleInputChange = (e) => setInput(e.target.value);
 
   const checkEmailRegex = (value: string) => {
     const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
@@ -35,10 +35,10 @@ export const Default = args => {
   );
 };
 
-export const Error = args => {
+export const Error = (args) => {
   const [input, setInput] = useState("i@am!in@valid@email");
 
-  const handleInputChange = e => setInput(e.target.value);
+  const handleInputChange = (e) => setInput(e.target.value);
 
   const checkEmailRegex = (value: string) => {
     const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;

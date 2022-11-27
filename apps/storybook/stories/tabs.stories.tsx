@@ -4,7 +4,7 @@ import { ComponentMeta } from "@storybook/react";
 
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
 
-export const Default = args => {
+export const Default = (args) => {
   return (
     <Tabs {...args}>
       <TabList>

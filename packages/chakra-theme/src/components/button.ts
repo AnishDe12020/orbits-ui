@@ -40,7 +40,7 @@ const accessibleColorMap: { [key: string]: AccessibleColor } = {
   },
 };
 
-const variantSolid = defineStyle(props => {
+const variantSolid = defineStyle((props) => {
   const { colorScheme: c } = props;
 
   if (c === "brand") {
@@ -94,7 +94,7 @@ const variantSolid = defineStyle(props => {
   };
 });
 
-const variantSolidBorder = defineStyle(props => {
+const variantSolidBorder = defineStyle((props) => {
   const { colorScheme: c } = props;
 
   if (c === "brand") {
@@ -156,7 +156,7 @@ const variantSolidBorder = defineStyle(props => {
   };
 });
 
-const variantLink = defineStyle(props => {
+const variantLink = defineStyle((props) => {
   const { colorScheme: c } = props;
   return {
     padding: 0,
@@ -182,7 +182,7 @@ const variantLink = defineStyle(props => {
   };
 });
 
-const variantGhost = defineStyle(props => {
+const variantGhost = defineStyle((props) => {
   const { colorScheme: c, theme } = props;
 
   if (c === "gray") {
@@ -221,7 +221,7 @@ const variantGhost = defineStyle(props => {
   };
 });
 
-const variantOutline = defineStyle(props => {
+const variantOutline = defineStyle((props) => {
   const { colorScheme: c } = props;
   let borderColor;
   if (c === "gray") {

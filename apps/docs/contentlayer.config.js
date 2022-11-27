@@ -4,7 +4,7 @@ const globalComputedFields = {
   slug: {
     type: "string",
     description: "The slug for the page",
-    resolve: doc => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
+    resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
   },
 };
 

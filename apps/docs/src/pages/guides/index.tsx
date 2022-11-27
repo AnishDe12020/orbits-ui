@@ -20,7 +20,7 @@ const GuidesPage: NextPage<IGuidePageProps> = ({ guides }) => {
   return (
     <ContentLayout>
       <VStack mt={6}>
-        {guides.map(guide => {
+        {guides.map((guide) => {
           return (
             <LinkBox
               as="article"
@@ -55,7 +55,7 @@ const GuidesPage: NextPage<IGuidePageProps> = ({ guides }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async context => {
+export const getStaticProps: GetStaticProps = async (context) => {
   const guides = allGuides;
 
   return {

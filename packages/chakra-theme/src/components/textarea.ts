@@ -42,12 +42,14 @@ function getDefaults(props: Record<string, any>) {
 
 const variants = {
   outline: defineStyle(
-    props => inputTheme.variants?.outline(props).field ?? {}
+    (props) => inputTheme.variants?.outline(props).field ?? {}
   ),
   flushed: defineStyle(
-    props => inputTheme.variants?.flushed(props).field ?? {}
+    (props) => inputTheme.variants?.flushed(props).field ?? {}
   ),
-  filled: defineStyle(props => inputTheme.variants?.filled(props).field ?? {}),
+  filled: defineStyle(
+    (props) => inputTheme.variants?.filled(props).field ?? {}
+  ),
 };
 
 const sizes = {

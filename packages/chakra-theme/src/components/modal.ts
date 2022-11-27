@@ -9,7 +9,7 @@ import { runIfFn } from "../utils/run-if-fn";
 const { defineMultiStyleConfig, definePartsStyle } =
   createMultiStyleConfigHelpers(parts.keys);
 
-const baseStyleDialog = defineStyle(props => {
+const baseStyleDialog = defineStyle((props) => {
   const { scrollBehavior } = props;
 
   return {
@@ -24,7 +24,7 @@ const baseStyleDialog = defineStyle(props => {
     borderColor: "brand.tertiary",
   };
 });
-const baseStyle = definePartsStyle(props => ({
+const baseStyle = definePartsStyle((props) => ({
   dialog: runIfFn(baseStyleDialog, props),
 }));
 

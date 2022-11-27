@@ -11,9 +11,9 @@ import {
   InputRightAddon,
 } from "@chakra-ui/react";
 
-export const Default = args => <Input {...args} placeholder="Default" />;
+export const Default = (args) => <Input {...args} placeholder="Default" />;
 
-export const Disabled = args => (
+export const Disabled = (args) => (
   <Input {...args} isDisabled placeholder="Disabled" />
 );
 
@@ -28,7 +28,7 @@ export const WithAddonsAndButton = ({ size, variant, ...args }) => (
   </Flex>
 );
 
-export const Invalid = args => (
+export const Invalid = (args) => (
   <Input {...args} isInvalid placeholder="Invalid" />
 );
 

@@ -8,14 +8,14 @@ import { runIfFn } from "../utils/run-if-fn";
 const { definePartsStyle, defineMultiStyleConfig } =
   createMultiStyleConfigHelpers(parts.keys);
 
-const baseStyleRequiredIndicator = defineStyle(props => {
+const baseStyleRequiredIndicator = defineStyle((props) => {
   return {
     marginStart: "1",
     color: "state.error",
   };
 });
 
-const baseStyleHelperText = defineStyle(props => {
+const baseStyleHelperText = defineStyle((props) => {
   return {
     mt: "2",
     color: "brand.quaternary",
@@ -24,7 +24,7 @@ const baseStyleHelperText = defineStyle(props => {
   };
 });
 
-const baseStyle = definePartsStyle(props => ({
+const baseStyle = definePartsStyle((props) => ({
   container: {
     width: "100%",
     position: "relative",

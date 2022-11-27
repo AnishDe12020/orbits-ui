@@ -4,13 +4,13 @@ import { ComponentMeta } from "@storybook/react";
 
 import { Textarea } from "@chakra-ui/react";
 
-export const Default = args => <Textarea {...args} placeholder="Default" />;
+export const Default = (args) => <Textarea {...args} placeholder="Default" />;
 
-export const Disabled = args => (
+export const Disabled = (args) => (
   <Textarea {...args} isDisabled placeholder="Disabled" />
 );
 
-export const Invalid = args => (
+export const Invalid = (args) => (
   <Textarea {...args} isInvalid placeholder="Invalid" />
 );
 

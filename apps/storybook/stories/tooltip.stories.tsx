@@ -4,7 +4,7 @@ import { ComponentMeta } from "@storybook/react";
 
 import { Tooltip } from "@chakra-ui/react";
 
-export const Default = args => {
+export const Default = (args) => {
   return (
     <Tooltip
       label="Lorem ipsum idk im typing this out, autocomplete bad bad"

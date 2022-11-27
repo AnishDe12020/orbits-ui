@@ -4,14 +4,14 @@ import { ComponentMeta } from "@storybook/react";
 
 import { Button } from "@chakra-ui/react";
 
-export const Default = args => <Button {...args}>Default</Button>;
+export const Default = (args) => <Button {...args}>Default</Button>;
 
-export const Disabled = args => (
+export const Disabled = (args) => (
   <Button {...args} isDisabled>
     Disabled
   </Button>
 );
-export const Loading = args => (
+export const Loading = (args) => (
   <Button {...args} isLoading>
     Loading
   </Button>
